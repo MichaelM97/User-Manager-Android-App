@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_list_fetch_failed">Failed to get users, please check your connection and try again.</string>
+    <string name="add_user_button_content_description">Add a new user</string>
+    <string name="add_user_title">Add new user</string>
+    <string name="name_field_label">Enter users name</string>
+    <string name="email_field_label">Enter users email</string>
+    <string name="empty_name_error">You must enter a name</string>
+    <string name="empty_email_error">You must enter an email</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="add_user_successful">User successfully created.</string>
+    <string name="add_user_failed">Failed to add user, please check your connection and try again.</string>
+    <string name="add_user_failed_email_in_use">The email you entered is already in use.</string>
+    <string name="add_user_failed_invalid_email">The email you entered is invalid.</string>
+    <string name="remove_user_title">Remove user</string>
+    <string name="remove_user_body">Are you sure that you want to remove %1$s?</string>
+    <string name="remove_user_successful">User successfully removed.</string>
+    <string name="remove_user_failed">Failed to remove user, please check your connection and try again.</string>
+</resources>
