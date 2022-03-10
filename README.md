@@ -1,4 +1,3 @@
-
 # User Management App
 
 A simple app that displays a list of users from https://gorest.co.in/, allows you to add new users, and remove existing ones by long pressing.
@@ -7,16 +6,24 @@ Built using Android Studio Bumblebee | 2021.1.1
 
 ## Setup
 
-### First-time build issue
-There is an issue when first building this project which is caused by the `kotlin-dsl-precompiled-script-plugins` plugin. For now, the following workaround exists:
+### Potential first-time build issue
+
+If you get either of the following build errors when first building this project
+```  
+Expression 'android' cannot be invoked as a function. The function 'invoke()' is not found  
+```  
+```  
+An exception occurred applying plugin request [id: 'com.android.library']
+```  
+this is an issue with the `kotlin-dsl-precompiled-script-plugins` plugin, for which the following workaround exists:
 
 0. Please ensure that you have configured Android Studio to build this app using Java 11 first (see below)
-1. When you first clone the repository, you will need to comment-out the `android` configuration blocks in the following Gradle scripts (located in the `buildSrc` folder):
-   * `common.gradle.kts`
-   * `commonFeature.gradle.kts`
-2. Once you have done this, run a Gradle sync and wait for it to fail
-3. Once it has failed, uncomment the `android` configuration blocks and Gradle sync again
-4. The project will now build successfully
+1. Comment-out everything in the following Gradle scripts (located in the `buildSrc` folder):
+    * `common.gradle.kts`
+    * `commonFeature.gradle.kts`
+2. Once you have done this, run a Gradle sync and wait for it to fail (this time the error should be something like `Unresolved reference: implementation`)
+3. Revert the commented-out files and Gradle sync again
+4. All subsequent builds of the project will now build successfully
 
 ### Ensure that you build the app using Java 11
 
